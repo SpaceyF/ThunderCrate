@@ -13,3 +13,6 @@ extension/web-ext-artifacts/
 # misc
 *.user
 .vs/
+
+# icon build helper
+gen_icon.py
