@@ -1,0 +1,48 @@
+{
+  "manifest_version": 2,
+  "name": "ThunderCrate for BONELAB",
+  "version": "1.0.0",
+  "description": "Adds a Subscribe button to Thunderstore that sends BONELAB code mods straight into your Mods folder through the ThunderCrate app.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "http://127.0.0.1:48752/*",
+    "http://localhost:48752/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://thunderstore.io/c/bonelab/*",
+        "https://bonelab.thunderstore.io/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "ThunderCrate",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "thundercrate@nontendo",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}

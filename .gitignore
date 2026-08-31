@@ -1,0 +1,15 @@
+# build output
+app/bin/
+app/obj/
+
+# node / web-ext
+node_modules/
+web-ext-artifacts/
+extension/web-ext-artifacts/
+
+# packaged extension (built from the extension/ folder)
+*.xpi
+
+# misc
+*.user
+.vs/

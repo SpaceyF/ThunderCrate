@@ -1,0 +1,53 @@
+/* state feedback on the cloned native button */
+#thundercrate-btn.tc-btn { transition: opacity .15s ease, background .15s ease; }
+#thundercrate-btn.tc-loading { opacity: .7 !important; pointer-events: none; }
+#thundercrate-btn.tc-done { background: #1f9d55 !important; border-color: #1f9d55 !important; color: #fff !important; }
+#thundercrate-btn.tc-fail { background: #c0392b !important; border-color: #c0392b !important; color: #fff !important; }
+
+/* fallback button, mimics thunderstore's primary */
+.tc-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: #18c4d6;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.tc-fallback:hover { background: #12aebf; }
+
+.tc-host {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483000;
+  width: 220px;
+}
+
+/* toast */
+.tc-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483600;
+  max-width: 320px;
+  padding: 12px 16px;
+  background: #1a1d26;
+  color: #e6e8ee;
+  font: 500 13px/1.4 "Segoe UI", system-ui, sans-serif;
+  border-radius: 10px;
+  border-left: 4px solid #18c4d6;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .45);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.tc-toast.tc-show { opacity: 1; transform: translateY(0); }
+.tc-toast-ok { border-left-color: #1f9d55; }
+.tc-toast-fail { border-left-color: #c0392b; }

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="popup.js"></script>
+  <style>
+    :root, :root[data-theme="storm"] {
+      --bg: #12151c;
+      --text: #e8ebf2;
+      --muted: #8b93a3;
+      --line: rgba(255,255,255,0.08);
+      --accent: #2ac9df;
+      --ink: #04151a;
+      --ok: #46d39a;
+      --bad: #f07171;
+    }
+    :root[data-theme="catppuccin"] {
+      --bg: #1e1e2e;
+      --text: #cdd6f4;
+      --muted: #a6adc8;
+      --line: rgba(255,255,255,0.09);
+      --accent: #cba6f7;
+      --ink: #1e1e2e;
+      --ok: #a6e3a1;
+      --bad: #f38ba8;
+    }
+    body {
+      width: 264px;
+      margin: 0;
+      padding: 16px;
+      background: var(--bg);
+      color: var(--text);
+      font: 13px/1.5 "Segoe UI", system-ui, sans-serif;
+    }
+    .path {
+      margin: 10px 0 0;
+      font-family: Consolas, monospace;
+      font-size: 11px;
+      color: var(--muted);
+      word-break: break-all;
+    }
+
+    p { color: var(--muted); margin: 0; }
+    b { color: var(--text); font-weight: 600; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+    .foot .lbl { font-size: 12px; color: var(--muted); }
+    .seg { display: flex; gap: 4px; }
+    .seg-btn {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 7px;
+      font: inherit;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .seg-btn:hover { color: var(--text); }
+    .seg-btn.active { background: var(--accent); color: var(--ink); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <p>Open a <a href="https://thunderstore.io/c/bonelab/" target="_blank">BONELAB mod</a> on Thunderstore and hit <b>Subscribe</b>. It drops right into your Mods folder.</p>
+
+  <div class="path" id="path" hidden></div>
+
+  <div class="foot">
+    <span class="lbl">Theme</span>
+    <div class="seg" id="seg">
+      <button class="seg-btn" data-theme-btn="storm">Storm</button>
+      <button class="seg-btn" data-theme-btn="catppuccin">Catppuccin</button>
+    </div>
+  </div>
+</body>
+</html>
