@@ -15,14 +15,16 @@ they talk over localhost (127.0.0.1), nothing ever leaves your pc.
 
 ### the app
 
-build it once:
+**[download the latest release](https://github.com/SpaceyF/ThunderCrate/releases/latest)**, unzip it anywhere, run `ThunderCrate.exe`. it's self contained so there's no .net to install and nothing to set up. windows smartscreen might warn you the first time since it isn't code signed, more info then run anyway.
+
+you get a little lightning icon in your tray. first time it runs it finds your bonelab mods folder on its own, and if it guesses wrong just right click the tray icon and set it.
+
+if you'd rather build it yourself:
 
 ```
 cd app
-dotnet build -c Release
+dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true
 ```
-
-then run `app/bin/Release/net10.0-windows/ThunderCrate.exe`. you get a little lightning icon in your tray. first time it runs it finds your bonelab mods folder on its own, and if it guesses wrong just right click the tray icon and set it.
 
 right click the tray for:
 
