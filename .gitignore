@@ -9,6 +9,7 @@ extension/web-ext-artifacts/
 
 # packaged extension (built from the extension/ folder)
 *.xpi
+extension.zip
 
 # misc
 *.user

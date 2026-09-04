@@ -9,6 +9,8 @@ it's two little pieces that talk to each other:
 
 they talk over localhost (127.0.0.1), nothing ever leaves your pc.
 
+**[get the extension on firefox add-ons](https://addons.mozilla.org/en-US/firefox/addon/thundercrate/)**
+
 ## setting it up
 
 ### the app
@@ -31,13 +33,13 @@ right click the tray for:
 
 ### the extension (zen / firefox)
 
-not on the firefox store yet, so for now:
+it's signed and up on the firefox add-on store now, so it's just a normal install:
 
-1. go to `about:debugging#/runtime/this-firefox`
-2. load temporary add-on
-3. pick `extension/manifest.json`
+**[addons.mozilla.org/firefox/addon/thundercrate](https://addons.mozilla.org/en-US/firefox/addon/thundercrate/)**
 
-that sticks around until you restart your browser. once it's signed on AMO you'll be able to install it for real.
+zen works too, it's a firefox fork. open that link in zen and hit add to firefox like you would with anything else. no more signature flags, no about:debugging.
+
+if you wanna run it from source instead, go to `about:debugging#/runtime/this-firefox`, load temporary add-on, pick `extension/manifest.json`. that version disappears when you restart your browser.
 
 ## using it
 
